@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャンプ同好会オフ会 候補地比較</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h1>🏕️ キャンプ同好会オフ会 候補地比較</h1>
+  <p class="subtitle">11施設 ｜ おすすめ順 ｜ 15〜40名対応 ｜ 2026年4月時点の公式サイト情報</p>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div id="cards"></div>
+
+  <div class="quick-table-wrap">
+    <h3>📊 早見表（土日祝・30名宿泊の場合）</h3>
+    <table class="quick-table">
+      <thead>
+        <tr>
+          <th>#</th><th>施設名</th><th>総額</th><th>1人あたり</th><th>トイレ</th><th>音楽</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="rank">1</td><td>NB SURF CAMP</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">2</td><td>REMIX BASE 木更津</td><td class="price">50,000円</td><td class="price">1,667円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">3</td><td>REMIX BASE 袖ヶ浦</td><td class="price">75,000円</td><td class="price">2,500円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">4</td><td>Nete KEiNA(持込)</td><td class="price">148,500円</td><td class="price">4,950円</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
+        <tr><td class="rank">5</td><td>TONAKA</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
+        <tr><td class="rank">6</td><td>田倉 WOODLAND</td><td class="price">55,000円</td><td class="price">≈3,667円(20名上限)</td><td class="status-good">◎</td><td class="status-good">◎</td></tr>
+        <tr><td class="rank">7</td><td>sotono花屋</td><td class="price">20,000円</td><td class="price">667円</td><td class="status-warn">✕</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">8</td><td>CHILL OUT BASE</td><td class="price">-</td><td class="price">6,500円(20名上限)</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
+        <tr><td class="rank">9</td><td>野呂ロッジ</td><td class="price">要電話</td><td class="price">要電話</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
+        <tr><td class="rank">10</td><td>TINY CAMP</td><td class="price">要確認</td><td class="price">≈1,650円+α</td><td class="status-good">◎</td><td class="status-warn">✕</td></tr>
+        <tr><td class="rank">11</td><td>NB FIELD</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-unknown">△</td><td class="status-unknown">?</td></tr>
+      </tbody>
+    </table>
+    <p style="padding:8px 20px 14px;font-size:11px;color:#999;">◎=自由/充実　△=記載なし(比較的自由と推測)　×=NG/制限あり　✕=なし　?=不明</p>
+  </div>
+
+  <p class="footer-note">
+    ※ 料金・設備は各公式サイトから取得した2026年4月時点の情報です。変更の可能性があるため必ず各施設へ直接ご確認ください。<br>
+    ※ グレーイタリックの項目は公式サイトに記載がなかった情報です。
+  </p>
+</div>
+
+<script>
+const camps = [
+  {
+    name: "NB SURF CAMP", area: "千葉県白子町（海沿い）", fit: "15〜40名で◎ イチオシ", verdictType: "good",
+    verdict: "設備（トイレ・シャワー・電源・Wi-Fi）が全部揃っていてサウナ・ドラム缶水風呂・トランポリンとエンタメ豊富。オフ会の盛り上がりには最適。姉妹店NB FIELD CAMP（長南町・森の中）も同料金で貸切可能。",
+    rows: [
+      ["貸切料金", "平日 55,000円 ／ 土日祝 88,000円"],
+      ["人数上限", "公式に記載なし", "u"],
+      ["30名の場合", "1人あたり約1,833〜2,933円"],
+      ["設備", "トイレ◎ シャワー◎ 電源◎ Wi-Fi◎"],
+      ["エンタメ", "サウナ小屋(6,000円/2h)・ドラム缶水風呂・トランポリン・サーフボードレンタル(4,000円)"],
+      ["ゴミ", "公式に記載なし", "u"],
+      ["音楽", "公式に記載なし（貸切なので比較的自由と推測）", "u"],
+      ["アクセス", "都心から約1.5時間（九十九里方面）"],
+      ["予約", "LINEまたは電話。不定休"],
+      ["公式", "https://www.nbsurfcamp.com/", "link"]
+    ]
+  },
+  {
+    name: "REMIX BASE 木更津", area: "千葉県木更津市", fit: "コスパ最強・都心から最速", verdictType: "good",
+    verdict: "土日祝50,000円定額で30名なら1人1,667円は全施設中最安クラス。都心から30分。off会利用を公式で想定。ただし入口に階段があり車両乗入不可なので荷物搬入に注意。駐車場は近隣含め最大30台。",
+    rows: [
+      ["貸切料金", "宿泊：平日25,000円／土日祝50,000円\nデイ：平日20,000円／土日祝40,000円\nアーリーCI(9:00)+5,000円"],
+      ["30名の場合", "宿泊1人あたり約1,667円 ← 最安クラス"],
+      ["設備", "トイレ◎ 炊事場◎ シャワー◎(温水なし) 焚き火かまど常設"],
+      ["敷地", "竹山林1,700㎡ 2段構成。山頂から富士山・東京湾一望"],
+      ["駐車場", "場内10台+近隣20台。入口に階段あり・車両乗入不可", "w"],
+      ["ゴミ", "サイトに記載なし", "u"],
+      ["音楽", "サイトに記載なし（off会想定施設）", "u"],
+      ["CI/CO", "IN 11:00〜13:00 ／ OUT 翌11:00"],
+      ["アクセス", "都心から約30分（アクアライン経由）"],
+      ["公式", "https://remix-base.com/remix-base-kisarazu/", "link"]
+    ]
+  },
+  {
+    name: "REMIX BASE 袖ヶ浦", area: "千葉県袖ヶ浦市", fit: "車両乗入◎ 荷物多い大人数向き", verdictType: "good",
+    verdict: "木更津より高いが車両乗入可能なオートキャンプ場。テントサウナあり。大人数でも車横付けで荷物搬入が楽。off会・イベント利用を公式で想定。",
+    rows: [
+      ["貸切料金", "宿泊：平日50,000円／土日祝75,000円\nデイ：平日25,000円／土日祝50,000円"],
+      ["30名の場合", "宿泊1人あたり約2,500円"],
+      ["設備", "トイレ◎ 炊事場◎ テントサウナあり(期間限定75%off) 車両乗入可能"],
+      ["CI/CO", "IN 11:00〜13:00 ／ OUT 翌11:00"],
+      ["アクセス", "木更津北ICから5分。都心から約40分"],
+      ["公式", "https://remix-base.com/remix-base-sodegaura/", "link"]
+    ]
+  },
+  {
+    name: "Nete KEiNA", area: "埼玉県秩父市", fit: "初心者〜上級者混在のオフ会に最適", verdictType: "good",
+    verdict: "コテージ・レンタルキャンプ・持込キャンプの3スタイルを自由に組み合わせ可能。カフェ併設で雨天も安心。各種イベント対応を明記。約3,000㎡の敷地に小川・畑・屋外シアターあり。",
+    rows: [
+      ["貸切料金", "基本料33,000円 ＋ 持込キャンプ大人3,850円/人\n（レンタル7,700円/人、コテージ8,800円〜/人）"],
+      ["人数上限", "30名"],
+      ["15名(持込)", "約90,750円（1人約6,050円）"],
+      ["30名(持込)", "約148,500円（1人約4,950円）"],
+      ["設備", "カフェ併設◎ コテージ(冷暖房/トイレ/シャワー)◎ 小川・畑"],
+      ["エンタメ", "屋外シアター・プール(夏)・焚火台・天体望遠鏡"],
+      ["ペット", "可"],
+      ["アクセス", "都心から車90分。西武秩父駅→バス「田村」下車徒歩3分"],
+      ["キャンセル", "14〜8日前30%、7〜3日前50%、2日前80%、前日〜100%"],
+      ["公式", "https://keinachichibu.com/", "link"],
+      ["予約", "https://www.nap-camp.com/saitama/15914/plans/20028548", "link"]
+    ]
+  },
+  {
+    name: "TONAKA", area: "東京都檜原村", fit: "東京唯一の村で標高600m", verdictType: "warn",
+    verdict: "元ヘリポートの全8サイト(各120㎡以上)を一括貸切。ウォシュレット付きトイレ・お湯の出る炊事場と設備◎。ただし週末のみ営業・連泊不可・コンビニなし・ゴミ全持ち帰り。都道沿いで車両音が響く場合あり。貸切はメールかInstagram DMで要相談。幹事の事前見学可。",
+    rows: [
+      ["貸切料金", "88,000円（全8サイト一括）"],
+      ["30名の場合", "1人あたり約2,933円"],
+      ["設備", "ウォシュレットトイレ◎ 炊事場(お湯出る)◎ Wi-Fi(管理棟周辺)"],
+      ["敷地", "全サイトウッドチップ敷き。広場4区画+雛壇オート4区画+屋根付きデッキ1区画"],
+      ["ゴミ", "全持ち帰り", "w"],
+      ["サイレントタイム", "22時〜翌6時"],
+      ["営業", "週末のみ。連泊不可", "w"],
+      ["注意", "檜原村にコンビニなし。都道沿いでエンジン音あり", "w"],
+      ["アクセス", "標高約600m。都心から車で約1.5時間"],
+      ["予約", "メール info@tonaka.tokyo またはInstagram DM"],
+      ["公式", "https://www.nap-camp.com/tokyo/16147", "link"]
+    ]
+  },
+  {
+    name: "田倉キャンプヴィレッジ WOODLAND", area: "千葉県富津市", fit: "自由度No.1 15〜20名◎", verdictType: "good",
+    verdict: "🎵音楽自由・消灯自由は全施設中で最も自由。深夜まで盛り上がれる。ただしWOODLANDは600㎡で約20名上限。30名以上なら別サイト「Dog run & BBQ campsite」(2000坪)を要検討。TVアニメ「ふたりソロキャンプ」ロケ地。",
+    rows: [
+      ["貸切料金", "約55,000円（平日/土日祝で異なる可能性あり）\n※予約時点でキャンセル料10,000円発生"],
+      ["人数上限", "約20名（30名以上はDog run & BBQサイトで）"],
+      ["設備", "トイレ◎ 水道◎ 小川あり。場内設備は無料使用可（要清掃返却）"],
+      ["音楽", "自由（公式に明記）🎵"],
+      ["消灯", "自由（公式に明記）"],
+      ["注意", "予約時点でキャンセル料10,000円。入口が狭い", "w"],
+      ["アクセス", "館山道「富津中央IC」から車15分"],
+      ["公式", "https://tagura-camp.com/site/woodland-campsite/", "link"]
+    ]
+  },
+  {
+    name: "sotono花屋自然体験キャンプ場", area: "千葉県木更津市", fit: "コスパ異次元 ただし上級者限定", verdictType: "fire",
+    verdict: "70名で20,000円（1人667円以下）は圧倒的最安。ただしトイレ・水道・シャワー・電源すべてなし。全員経験者の同好会なら最高。プロ庭師管理で虫が少ない。直火可。",
+    rows: [
+      ["貸切料金", "何名でも20,000円（最大70名）"],
+      ["30名の場合", "1人あたり約667円 ← 圧倒的最安"],
+      ["設備", "⚠️ トイレなし・水道なし・シャワーなし・電源なし", "w"],
+      ["良い点", "直火可・薪拾い可・車11台乗入可・ゴミ捨て場あり・虫少ない"],
+      ["CI/CO", "IN 05:00 ／ OUT 23:30"],
+      ["アクセス", "都心から約40分（アクアライン経由）"],
+      ["キャンセル", "24時間前まで全額返金、24時間以内は全額キャンセル料"],
+      ["公式", "https://excamp.jp/land/1623", "link"]
+    ]
+  },
+  {
+    name: "CHILL OUT BASE WEST TAMA", area: "東京都日の出町", fit: "15〜20名で設備重視なら◎", verdictType: "warn",
+    verdict: "最大20名なので40名は不可。BBQ道具一式・調理器具すべて無料レンタルは手ぶら勢に最高。都心から最も近く電車+バスでもアクセス可。ただしテント・寝袋レンタルなし（持参必須）、ゴミ持ち帰り、現金のみ。",
+    rows: [
+      ["料金", "大人1名6,500円（入場料・駐車場・光熱費込み）"],
+      ["人数上限", "最大20名", "w"],
+      ["15名の場合", "約97,500円（1人6,500円）"],
+      ["設備", "トイレ◎ シャワー◎ 電源◎ BBQ道具一式・調理器具すべて無料レンタル"],
+      ["有料OP", "布団1,000円/組、テントサウナ5,000円、流しそうめん台3,000円"],
+      ["ゴミ", "全持ち帰り", "w"],
+      ["注意", "テント・寝袋レンタルなし（持参必須）。現金のみ", "w"],
+      ["CI/CO", "IN 12:00〜15:00 ／ OUT 10:00"],
+      ["アクセス", "圏央道 日の出ICから約20分 ／ 武蔵五日市駅からバス15分"],
+      ["公式", "https://www.chilloutbasewesttama.com/price", "link"]
+    ]
+  },
+  {
+    name: "野呂ロッジキャンプ場（場内貸切）", area: "神奈川県相模原市", fit: "ポテンシャルは高い 要電話", verdictType: "warn",
+    verdict: "場内全体を丸ごと貸切できる数少ない施設。道志川沿い・バンガロー群・大滝(徒歩20分)とロケーション最高級。ただし料金・人数・ルールすべて電話でしかわからない。大音量音楽NG。",
+    rows: [
+      ["貸切料金", "公式に非公開（電話でのみ確認可能）", "u"],
+      ["設備", "トイレ◎ シャワー◎ 電源◎ 道志川沿い・バンガロー(6〜32畳)・大滝"],
+      ["音楽", "大音量イベントは基本NG（公式に明記）", "w"],
+      ["アクセス", "都心から車で約1.5時間"],
+      ["公式", "https://norolodge.com/privateevent/", "link"]
+    ]
+  },
+  {
+    name: "TINY CAMP VILLAGE", area: "神奈川県厚木市七沢", fit: "オフ会には不向き（小規模・音楽禁止）", verdictType: "warn",
+    verdict: "「小さなキャンプ場」と公式が明記。1サイト10m×8m。音楽禁止・夜間静粛なのでオフ会の盛り上がりに大きな制約。七沢温泉が徒歩3分、ピザ窯ありは魅力。夏場のヤマビルに注意。",
+    rows: [
+      ["料金", "1人1,650円 ＋ 貸切料（3区画以上で発生、金額は要確認）"],
+      ["人数上限", "30名（ただし非常に窮屈）"],
+      ["設備", "トイレ◎ 水道◎ ピザ窯◎ 七沢温泉徒歩3分"],
+      ["音楽", "禁止", "w"],
+      ["ゴミ", "全持ち帰り", "w"],
+      ["アクセス", "東名 厚木ICから約20分"],
+      ["公式", "https://www.tiny-camp-village.com/", "link"]
+    ]
+  },
+  {
+    name: "NB FIELD CAMP", area: "千葉県長南町（山の中）", fit: "SURF CAMPの下位互換", verdictType: "warn",
+    verdict: "SURF CAMPの姉妹店で料金は同じだが設備が段違いに少ない。水道なし・バイオトイレのみ・シャワーなし。駐車場10台。同じ料金ならSURF CAMPを選ぶべき。森の中の野営感を求めるガチ勢専用。",
+    rows: [
+      ["貸切料金", "平日55,000円 ／ 土日祝88,000円（SURF CAMPと同額）"],
+      ["設備", "⚠️ 水道なし・バイオトイレのみ・シャワーなし", "w"],
+      ["駐車場", "10台（大人数は乗り合わせ必須）", "w"],
+      ["公式", "https://www.nbsurfcamp.com/", "link"]
+    ]
+  }
+];
+
+function render() {
+  const tabsEl = document.getElementById("tabs");
+  const cardsEl = document.getElementById("cards");
+
+  camps.forEach((c, i) => {
+    // Tab
+    const btn = document.createElement("button");
+    btn.className = "tab-btn" + (i === 0 ? " active" : "");
+    btn.textContent = (i + 1) + ". " + c.name;
+    btn.onclick = () => {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".camp-card").forEach(d => d.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById("card-" + i).classList.add("active");
+    };
+    tabsEl.appendChild(btn);
+
+    // Card
+    const card = document.createElement("div");
+    card.className = "camp-card" + (i === 0 ? " active" : "");
+    card.id = "card-" + i;
+
+    let rowsHtml = "";
+    c.rows.forEach(r => {
+      const [label, value, type] = r;
+      let cls = "val";
+      let content = value;
+      if (type === "w") cls = "val warn-text";
+      if (type === "u") cls = "val unknown-text";
+      if (type === "link") content = '<a href="' + value + '" target="_blank" rel="noopener">' + value + '</a>';
+      content = content.replace(/\n/g, "<br>");
+      rowsHtml += '<tr><td class="label">' + label + '</td><td class="' + cls + '">' + content + '</td></tr>';
+    });
+
+    card.innerHTML =
+      '<div class="card-header"><h2>#' + (i+1) + ' ' + c.name + '</h2><p class="meta">' + c.area + '</p></div>' +
+      '<div class="card-verdict ' + c.verdictType + '"><span class="fit-tag">' + c.fit + '</span><br>' + c.verdict + '</div>' +
+      '<table class="detail-table">' + rowsHtml + '</table>';
+
+    cardsEl.appendChild(card);
+  });
+}
+
+render();
+</script>
+</body>
+</html>
