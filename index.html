@@ -27,10 +27,10 @@
       </thead>
       <tbody>
         <tr><td class="rank">1</td><td>オートキャンプもぐら Cサイト</td><td class="price">44,000円(100名まで)</td><td class="price">1,467円</td><td class="status-unknown">△</td><td class="status-unknown">△</td></tr>
-        <tr><td class="rank">2</td><td>NB SURF CAMP</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
-        <tr><td class="rank">3</td><td>REMIX BASE 木更津</td><td class="price">50,000円</td><td class="price">1,667円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
-        <tr><td class="rank">4</td><td>Awesome Nature Camp Studio</td><td class="price">110,000円</td><td class="price">3,667円</td><td class="status-good">◎</td><td class="status-good">◎</td></tr>
-        <tr><td class="rank">5</td><td>REMIX BASE 袖ヶ浦</td><td class="price">75,000円</td><td class="price">2,500円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">2</td><td>REMIX BASE 袖ヶ浦</td><td class="price">75,000円</td><td class="price">2,500円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">3</td><td>Awesome Nature Camp Studio</td><td class="price">110,000円</td><td class="price">3,667円</td><td class="status-good">◎</td><td class="status-good">◎</td></tr>
+        <tr><td class="rank">4</td><td>NB SURF CAMP</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">5</td><td>REMIX BASE 木更津</td><td class="price">50,000円</td><td class="price">1,667円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
         <tr><td class="rank">6</td><td>Nete KEiNA(持込)</td><td class="price">148,500円</td><td class="price">4,950円</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
         <tr><td class="rank">7</td><td>TONAKA</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
         <tr><td class="rank">8</td><td>田倉 WOODLAND</td><td class="price">55,000円</td><td class="price">≈3,667円(20名上限)</td><td class="status-good">◎</td><td class="status-good">◎</td></tr>
@@ -78,6 +78,35 @@ const camps = [
     ]
   },
   {
+    name: "REMIX BASE 袖ヶ浦", area: "千葉県袖ヶ浦市", fit: "車両乗入◎ 荷物多い大人数向き", verdictType: "good",
+    verdict: "木更津より高いが車両乗入可能なオートキャンプ場。テントサウナあり。大人数でも車横付けで荷物搬入が楽。off会・イベント利用を公式で想定。",
+    rows: [
+      ["貸切料金", "宿泊：平日50,000円／土日祝75,000円\nデイ：平日25,000円／土日祝50,000円"],
+      ["30名の場合", "宿泊1人あたり約2,500円"],
+      ["設備", "トイレ◎ 炊事場◎ テントサウナあり(期間限定75%off) 車両乗入可能"],
+      ["CI/CO", "IN 11:00〜13:00 ／ OUT 翌11:00"],
+      ["アクセス", "木更津北ICから5分。都心から約40分"],
+      ["公式", "https://remix-base.com/remix-base-sodegaura/", "link"]
+    ]
+  },
+  {
+    name: "Awesome Nature Camp Studio", area: "山梨県都留市（新宿から80分）", fit: "24h音楽・演奏自由 泊まれる野外スタジオ", verdictType: "good",
+    verdict: "日本唯一の「泊まれる野外スタジオ」。約500坪完全貸切で24時間音出しOK（生演奏・ライブも可）。敷地内に渓流が流れる森の中にあり、撮影・イベント・オフ会に幅広く対応。リビングキャビン（冷蔵庫・電源）・高速Wi-Fi・車乗入可と設備も充実。新宿から車約80分、都留ICから10分とアクセスも悪くない。",
+    rows: [
+      ["貸切料金", "オンシーズン(3/21〜11月末)：66,000円\n冬季(12/1〜翌3/20)：44,000円\n※10名・車4台まで込み。超過1人2,200円・1台1,100円"],
+      ["30名の場合", "オンシーズン：約110,000円（1人約3,667円）"],
+      ["人数上限", "公式に記載なし（要確認）", "u"],
+      ["設備", "トイレ◎ 高速Wi-Fi◎ BBQグリル・焚き火台・テーブル・チェア・タープ・LED照明（すべて無料）"],
+      ["リビングキャビン", "冷蔵庫・メイク台・ハンガーラック・電源 完備"],
+      ["音楽", "24時間音出しOK・生演奏・ライブ演奏も可🎵"],
+      ["ゴミ", "45L×4袋まで回収（要分別）。超過分500円/袋"],
+      ["有料オプション", "テントサウナ10,000円 ベルテント4,000〜6,000円 楽器・スピーカー等"],
+      ["CI/CO", "IN 15:00〜18:00 ／ OUT 翌10:00"],
+      ["アクセス", "中央道 都留ICから約10分。新宿から車で約80分"],
+      ["予約", "https://www.nap-camp.com/yamanashi/16245", "link"]
+    ]
+  },
+  {
     name: "NB SURF CAMP", area: "千葉県白子町（海沿い）", fit: "15〜40名で◎ イチオシ", verdictType: "good",
     verdict: "設備（トイレ・シャワー・電源・Wi-Fi）が全部揃っていてサウナ・ドラム缶水風呂・トランポリンとエンタメ豊富。オフ会の盛り上がりには最適。姉妹店NB FIELD CAMP（長南町・森の中）も同料金で貸切可能。",
     rows: [
@@ -107,35 +136,6 @@ const camps = [
       ["CI/CO", "IN 11:00〜13:00 ／ OUT 翌11:00"],
       ["アクセス", "都心から約30分（アクアライン経由）"],
       ["公式", "https://remix-base.com/remix-base-kisarazu/", "link"]
-    ]
-  },
-  {
-    name: "Awesome Nature Camp Studio", area: "山梨県都留市（新宿から80分）", fit: "24h音楽・演奏自由 泊まれる野外スタジオ", verdictType: "good",
-    verdict: "日本唯一の「泊まれる野外スタジオ」。約500坪完全貸切で24時間音出しOK（生演奏・ライブも可）。敷地内に渓流が流れる森の中にあり、撮影・イベント・オフ会に幅広く対応。リビングキャビン（冷蔵庫・電源）・高速Wi-Fi・車乗入可と設備も充実。新宿から車約80分、都留ICから10分とアクセスも悪くない。",
-    rows: [
-      ["貸切料金", "オンシーズン(3/21〜11月末)：66,000円\n冬季(12/1〜翌3/20)：44,000円\n※10名・車4台まで込み。超過1人2,200円・1台1,100円"],
-      ["30名の場合", "オンシーズン：約110,000円（1人約3,667円）"],
-      ["人数上限", "公式に記載なし（要確認）", "u"],
-      ["設備", "トイレ◎ 高速Wi-Fi◎ BBQグリル・焚き火台・テーブル・チェア・タープ・LED照明（すべて無料）"],
-      ["リビングキャビン", "冷蔵庫・メイク台・ハンガーラック・電源 完備"],
-      ["音楽", "24時間音出しOK・生演奏・ライブ演奏も可🎵"],
-      ["ゴミ", "45L×4袋まで回収（要分別）。超過分500円/袋"],
-      ["有料オプション", "テントサウナ10,000円 ベルテント4,000〜6,000円 楽器・スピーカー等"],
-      ["CI/CO", "IN 15:00〜18:00 ／ OUT 翌10:00"],
-      ["アクセス", "中央道 都留ICから約10分。新宿から車で約80分"],
-      ["予約", "https://www.nap-camp.com/yamanashi/16245", "link"]
-    ]
-  },
-  {
-    name: "REMIX BASE 袖ヶ浦", area: "千葉県袖ヶ浦市", fit: "車両乗入◎ 荷物多い大人数向き", verdictType: "good",
-    verdict: "木更津より高いが車両乗入可能なオートキャンプ場。テントサウナあり。大人数でも車横付けで荷物搬入が楽。off会・イベント利用を公式で想定。",
-    rows: [
-      ["貸切料金", "宿泊：平日50,000円／土日祝75,000円\nデイ：平日25,000円／土日祝50,000円"],
-      ["30名の場合", "宿泊1人あたり約2,500円"],
-      ["設備", "トイレ◎ 炊事場◎ テントサウナあり(期間限定75%off) 車両乗入可能"],
-      ["CI/CO", "IN 11:00〜13:00 ／ OUT 翌11:00"],
-      ["アクセス", "木更津北ICから5分。都心から約40分"],
-      ["公式", "https://remix-base.com/remix-base-sodegaura/", "link"]
     ]
   },
   {
