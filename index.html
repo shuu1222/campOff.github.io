@@ -32,15 +32,16 @@
         <tr><td class="rank">4</td><td>NB SURF CAMP</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
         <tr><td class="rank">5</td><td>REMIX BASE 木更津</td><td class="price">50,000円</td><td class="price">1,667円</td><td class="status-good">◎</td><td class="status-unknown">△</td></tr>
         <tr><td class="rank">6</td><td>The Little Bee WILD BASE</td><td class="price">70,000円(50名まで)</td><td class="price">2,333円</td><td class="status-unknown">△</td><td class="status-unknown">△</td></tr>
-        <tr><td class="rank">7</td><td>Nete KEiNA(持込)</td><td class="price">148,500円</td><td class="price">4,950円</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
-        <tr><td class="rank">8</td><td>TONAKA</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
-        <tr><td class="rank">9</td><td>田倉 WOODLAND</td><td class="price">55,000円</td><td class="price">≈3,667円(20名上限)</td><td class="status-good">◎</td><td class="status-good">◎</td></tr>
-        <tr><td class="rank">10</td><td>sotono花屋</td><td class="price">20,000円</td><td class="price">667円</td><td class="status-warn">✕</td><td class="status-unknown">△</td></tr>
-        <tr><td class="rank">11</td><td>CHILL OUT BASE</td><td class="price">-</td><td class="price">6,500円(20名上限)</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
-        <tr><td class="rank">12</td><td>野呂ロッジ</td><td class="price">要電話</td><td class="price">要電話</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
-        <tr><td class="rank">13</td><td>TINY CAMP</td><td class="price">要確認</td><td class="price">≈1,650円+α</td><td class="status-good">◎</td><td class="status-warn">✕</td></tr>
-        <tr><td class="rank">14</td><td>NB FIELD</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-unknown">△</td><td class="status-unknown">?</td></tr>
-        <tr><td class="rank">15</td><td>マキオカ ネイチャークラブ</td><td class="price">231,000円</td><td class="price">7,700円</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
+        <tr><td class="rank">7</td><td>Katsuura Natural Space</td><td class="price">130,000円</td><td class="price">4,333円</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
+        <tr><td class="rank">8</td><td>Nete KEiNA(持込)</td><td class="price">148,500円</td><td class="price">4,950円</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
+        <tr><td class="rank">9</td><td>TONAKA</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
+        <tr><td class="rank">10</td><td>田倉 WOODLAND</td><td class="price">55,000円</td><td class="price">≈3,667円(20名上限)</td><td class="status-good">◎</td><td class="status-good">◎</td></tr>
+        <tr><td class="rank">11</td><td>sotono花屋</td><td class="price">20,000円</td><td class="price">667円</td><td class="status-warn">✕</td><td class="status-unknown">△</td></tr>
+        <tr><td class="rank">12</td><td>CHILL OUT BASE</td><td class="price">-</td><td class="price">6,500円(20名上限)</td><td class="status-good">◎</td><td class="status-unknown">?</td></tr>
+        <tr><td class="rank">13</td><td>野呂ロッジ</td><td class="price">要電話</td><td class="price">要電話</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
+        <tr><td class="rank">14</td><td>TINY CAMP</td><td class="price">要確認</td><td class="price">≈1,650円+α</td><td class="status-good">◎</td><td class="status-warn">✕</td></tr>
+        <tr><td class="rank">15</td><td>NB FIELD</td><td class="price">88,000円</td><td class="price">2,933円</td><td class="status-unknown">△</td><td class="status-unknown">?</td></tr>
+        <tr><td class="rank">16</td><td>マキオカ ネイチャークラブ</td><td class="price">231,000円</td><td class="price">7,700円</td><td class="status-good">◎</td><td class="status-ng">×</td></tr>
       </tbody>
     </table>
     <p style="padding:8px 20px 14px;font-size:11px;color:#999;">◎=自由/充実　△=記載なし(比較的自由と推測)　×=NG/制限あり　✕=なし　?=不明</p>
@@ -161,6 +162,29 @@ const camps = [
       ["評価", "新規施設（2025年〜）のためレビューなし"],
       ["公式サイト", "https://www.the-little-bee.com/", "link"],
       ["予約(なっぷ)", "https://www.nap-camp.com/yamanashi/16837", "link"]
+    ]
+  },
+  {
+    name: "Katsuura Natural Space Camp", area: "千葉県勝浦市（東京から約90分）", fit: "竹林の完全貸切・設備充実・ウォシュレット◎", verdictType: "good",
+    verdict: "竹林に囲まれた完全プライベート貸切（1日1組）。トイレはウォシュレット付き水洗・電源・Wi-Fi・ミニキッチン（温水）完備と設備が充実。ゴミ分別回収あり。30名で130,000円（1人約4,333円）。近隣に温泉あり（車5分）。レンタル品もテント・焚き火台・チェア等あり手ぶら対応可。難点はサイト面積約990㎡とやや狭め・シャワーなし・駐車場3台（乗り合わせ必須）・音楽イベント対応は要問い合わせ。",
+    rows: [
+      ["貸切料金", "5名まで30,000円 ＋ 追加4,000円/人"],
+      ["30名の場合", "130,000円（1人約4,333円）"],
+      ["広さ・収容", "約300坪（990㎡）/ 最大50名・1日1組限定"],
+      ["音楽🎵", "⚠️ 公式に記載なし。要事前確認", "u"],
+      ["トイレ", "男女別ウォシュレット付き水洗◎"],
+      ["シャワー", "なし。近隣に温泉施設あり（車約5分）", "w"],
+      ["電源・通信", "電源コンセント全域・Wi-Fi完備"],
+      ["炊事", "ミニキッチン（温水あり）◎"],
+      ["ゴミ", "分別ゴミ箱完備（回収あり）◎"],
+      ["レンタル", "テント・ファイヤービット・チェア・BBQコンロ・トライポッド・薪ストーブ"],
+      ["薪販売", "雑木ミックス5kg 800円 / サクラ・ケヤキ5kg 1,000円"],
+      ["駐車場", "3台（敷地内乗り入れ不可）⚠️ 大人数は乗り合わせ必須", "w"],
+      ["CI/CO", "IN 14:00 ／ OUT 10:00（日帰り: IN 11:00 ／ OUT 21:00）"],
+      ["評価", "★4.43（なっぷ 5件）"],
+      ["アクセス", "圏央道 市原鶴舞ICから約35分（東京から約90分）"],
+      ["公式サイト", "https://katsuura-naturalspace.com/", "link"],
+      ["予約(なっぷ)", "https://www.nap-camp.com/chiba/14777", "link"]
     ]
   },
   {
